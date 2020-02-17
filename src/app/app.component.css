@@ -1,0 +1,12 @@
+.main {
+    cursor: pointer;
+}
+
+.main_right {
+    cursor: pointer;
+    color: white;
+}
+
+.spacer {
+    flex: 1 1 auto;
+  }

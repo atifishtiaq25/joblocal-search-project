@@ -1,0 +1,11 @@
+<mat-card class="field_card" *ngIf="resultsFound === false">
+    Job Posting not found!
+</mat-card>
+<mat-card class="field_card" *ngIf="resultsFound === true">
+    <h2>{{jobData.title}}</h2>
+    <div [innerHTML]="jobData.description"></div>
+    <div [innerHTML]="jobData.requirements"></div>
+</mat-card>
+<button class="field_button" mat-raised-button color="accent" fxLayout="row" [routerLink]="['/search']" >
+    Search Again!
+</button>

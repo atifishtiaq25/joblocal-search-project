@@ -1,0 +1,34 @@
+<mat-card class="field_card">
+    <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around start" fxLayoutGap="10px">
+        <mat-form-field fxFlex = "45">
+            <mat-label>Job Type</mat-label>
+            <mat-select [(ngModel)]="selectedEmploymentType" name="employment_Type">
+                <mat-option *ngFor="let empType of employmentTypes" [value]="empType.id">
+                    {{empType.attributes.title}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field fxFlex = "45" class="mat-form-field ">
+            <mat-label>Job Title</mat-label>
+            <input matInput type="text" [(ngModel)]="jobTitle">
+            <button mat-button *ngIf="jobTitle" matSuffix mat-icon-button aria-label="Clear" (click)="jobTitle=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <button fxFlex = "10" mat-raised-button color="accent" (click)="search()">
+            <i class="material-icons">
+                search
+                </i>
+        </button>
+    </div>
+</mat-card>
+<mat-card *ngIf="resultsFound === true" class="field_card">
+    <div *ngFor="let job of jobsList">
+        <mat-card class="inner_field_card" [routerLink]="['/job-view']" [queryParams]="{ jobID:job.attributes.job_posting_id }">
+            {{job.attributes.title}}
+        </mat-card>
+    </div>
+</mat-card>
+<mat-card *ngIf="resultsFound === false" class="field_card">
+    No Result Found!
+</mat-card>
