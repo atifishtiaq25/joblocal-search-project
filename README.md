@@ -22,7 +22,7 @@ Run `ng lint` to execute the lint tests.
 
 When the project is loaded, the job publications can be searched by choosing an employment type and clicking the search button or giving a query in the job title field and clicking the search and also by choosing an employment type and a query, you can have filtered results as well pertaining to those two paramenters. Upon loading the retrieved list, you can click on any item in the list and it will navigate to the job description of the selected publication. 
 
-In the toolbar on the top, clicking the joblocal logo will open a new tab and navigate to the joblocal website. And clicking the task project label will navigate to the search page of the project. THe same will happen if you were to click the 'Search Again!' button at the end of the job descripton page.
+In the toolbar on the top, clicking the joblocal logo will open a new tab and navigate to the joblocal website. And clicking the task project label will navigate to the search page of the project. The same will happen if you were to click the 'Search Again!' button at the end of the job descripton page.
 
 ## My notes
 
